@@ -92,19 +92,19 @@ export default function AboutPage() {
       </div>
 
       {/* 2. Core Bio Card */}
-      <div className="mb-16">
+      <div className="mb-12 sm:mb-16">
         <LiquidGlassWrapper
           config={{
             borderRadius: 16,
           }}
           fallbackClassName="liquid-glass-fallback"
-          className="p-8 sm:p-12 rounded-2xl border border-white/18 shadow-2xl bg-[#010101]/60"
+          className="p-5 sm:p-8 md:p-12 rounded-2xl border border-white/18 shadow-2xl bg-[#010101]/60"
         >
-          <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight mb-4 flex items-center gap-2.5">
-            <Sparkles className="w-5 h-5 text-[#00E676]" />
+          <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white tracking-tight mb-4 flex items-center gap-2.5">
+            <Sparkles className="w-5 h-5 text-[#00E676] shrink-0" />
             <span>Bridging Design Craft with Systems Engineering</span>
           </h2>
-          <div className="space-y-4 text-sm sm:text-base text-slate-300 leading-relaxed">
+          <div className="space-y-4 text-xs sm:text-sm md:text-base text-slate-300 leading-relaxed">
             <p>
               With years of dedicated experience in modern web ecosystems, I bridge the gap between creative visual expression and rigorous systems architecture. From building multi-tenant e-commerce platforms with real-time stock sync to crafting bespoke SVG refraction engines, my focus is always on user delight, responsiveness, and clean maintainable code.
             </p>
@@ -116,11 +116,11 @@ export default function AboutPage() {
       </div>
 
       {/* 3. Architectural Philosophies Grid */}
-      <div className="mb-16">
-        <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-center mb-8 text-white">
+      <div className="mb-12 sm:mb-16">
+        <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-center mb-6 sm:mb-8 text-white">
           Architectural Principles
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           {philosophies.map((item, idx) => {
             const Icon = item.icon;
             return (
@@ -130,12 +130,12 @@ export default function AboutPage() {
                   borderRadius: 16,
                 }}
                 fallbackClassName="liquid-glass-fallback"
-                className="p-6 sm:p-8 rounded-2xl border border-white/15 hover:border-[#00E676]/50 transition-all flex flex-col gap-3 bg-white/5"
+                className="p-5 sm:p-8 rounded-2xl border border-white/15 hover:border-[#00E676]/50 transition-all flex flex-col gap-3 bg-white/5"
               >
-                <div className="p-3 rounded-xl bg-white/5 border border-white/12 w-fit">
-                  <Icon className={`w-6 h-6 ${item.accent}`} />
+                <div className="p-2.5 sm:p-3 rounded-xl bg-white/5 border border-white/12 w-fit">
+                  <Icon className={`w-5 h-5 sm:w-6 sm:h-6 ${item.accent}`} />
                 </div>
-                <h3 className="text-lg font-bold text-white tracking-tight">
+                <h3 className="text-base sm:text-lg font-bold text-white tracking-tight">
                   {item.title}
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
@@ -153,14 +153,14 @@ export default function AboutPage() {
           borderRadius: 16,
         }}
         fallbackClassName="liquid-glass-fallback"
-        className="p-8 sm:p-12 rounded-2xl border border-[#00E676]/30 shadow-2xl mb-16 bg-[#010101]/60"
+        className="p-5 sm:p-8 md:p-12 rounded-2xl border border-[#00E676]/30 shadow-2xl mb-12 sm:mb-16 bg-[#010101]/60"
       >
         <div className="flex items-center gap-3 mb-6">
-          <div className="p-2.5 rounded-xl bg-[#00E676]/10 border border-[#00E676]/30 text-[#00E676]">
+          <div className="p-2.5 rounded-xl bg-[#00E676]/10 border border-[#00E676]/30 text-[#00E676] shrink-0">
             <Bot className="w-6 h-6" />
           </div>
           <div>
-            <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
+            <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white tracking-tight">
               My AI-Augmented Development Workflow
             </h2>
             <p className="text-xs sm:text-sm text-slate-400">
@@ -169,16 +169,16 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4">
           {aiWorkflowSteps.map((step, idx) => (
             <div
               key={idx}
-              className="p-5 rounded-xl bg-white/5 border border-white/12 flex flex-col gap-2"
+              className="p-4 sm:p-5 rounded-xl bg-white/5 border border-white/12 flex flex-col gap-2"
             >
-              <div className="text-xs font-bold text-[#00E676] uppercase tracking-wider">
+              <div className="text-[11px] sm:text-xs font-bold text-[#00E676] uppercase tracking-wider">
                 {step.tool}
               </div>
-              <div className="text-sm font-semibold text-white">
+              <div className="text-xs sm:text-sm font-semibold text-white">
                 {step.role}
               </div>
               <p className="text-xs text-slate-400 leading-relaxed">
@@ -190,7 +190,7 @@ export default function AboutPage() {
       </LiquidGlassWrapper>
 
       {/* 5. Navigation Links */}
-      <div className="flex flex-wrap items-center justify-center gap-4">
+      <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 w-full max-w-md mx-auto">
         <LiquidGlassWrapper
           as={Link}
           href="/projects"
@@ -199,7 +199,7 @@ export default function AboutPage() {
           }}
           liquidPress={{ scale: 0.94, squish: 0.03 }}
           fallbackClassName="liquid-glass-pill-fallback"
-          className="px-6 py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-[#00E676]/15 hover:bg-[#00E676]/25 border border-[#00E676]/60 flex items-center gap-2 cursor-pointer shadow-lg"
+          className="w-full sm:w-auto px-6 py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-[#00E676]/15 hover:bg-[#00E676]/25 border border-[#00E676]/60 flex items-center justify-center gap-2 cursor-pointer shadow-lg"
         >
           <span>View Real-World Projects</span>
           <ArrowRight className="w-4 h-4 text-[#00E676]" />
@@ -213,7 +213,7 @@ export default function AboutPage() {
           }}
           liquidPress={{ scale: 0.94, squish: 0.03 }}
           fallbackClassName="liquid-glass-pill-fallback"
-          className="px-6 py-3 rounded-full text-xs sm:text-sm font-semibold text-slate-300 hover:text-white bg-white/5 hover:bg-white/10 border border-white/18 flex items-center gap-2 cursor-pointer"
+          className="w-full sm:w-auto px-6 py-3 rounded-full text-xs sm:text-sm font-semibold text-slate-300 hover:text-white bg-white/5 hover:bg-white/10 border border-white/18 flex items-center justify-center gap-2 cursor-pointer"
         >
           <span>Get in Touch</span>
         </LiquidGlassWrapper>

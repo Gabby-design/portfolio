@@ -46,7 +46,7 @@ export default function Home() {
         </div>
 
         {/* Hero Headline */}
-        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.1] sm:leading-[1.12]">
+        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.15] sm:leading-[1.12] break-words">
           Crafting{' '}
           <span className="text-[#00E676] underline decoration-[#00E676]/40 decoration-wavy decoration-2">
             High-Performance
@@ -61,7 +61,7 @@ export default function Home() {
         </p>
 
         {/* Quick CTA Liquid Buttons */}
-        <div className="mt-8 sm:mt-10 flex flex-wrap items-center justify-center gap-4 w-full max-w-md">
+        <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 w-full max-w-md">
           {/* Primary CTA */}
           <LiquidGlassWrapper
             as={Link}
@@ -71,7 +71,7 @@ export default function Home() {
             }}
             liquidPress={{ scale: 0.94, squish: 0.03 }}
             fallbackClassName="liquid-glass-pill-fallback"
-            className="flex-1 min-w-[170px] inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-full text-sm font-semibold text-white bg-[#00E676]/15 hover:bg-[#00E676]/25 border border-[#00E676]/60 shadow-[0_0_24px_rgba(0,230,118,0.25)] transition-all group cursor-pointer"
+            className="w-full sm:flex-1 inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-full text-xs sm:text-sm font-semibold text-white bg-[#00E676]/15 hover:bg-[#00E676]/25 border border-[#00E676]/60 shadow-[0_0_24px_rgba(0,230,118,0.25)] transition-all group cursor-pointer"
           >
             <span>Explore Work</span>
             <ArrowRight className="w-4 h-4 text-[#00E676] group-hover:translate-x-1 transition-transform" />
@@ -88,7 +88,7 @@ export default function Home() {
             }}
             liquidPress={{ scale: 0.94, squish: 0.03 }}
             fallbackClassName="liquid-glass-pill-fallback"
-            className="flex-1 min-w-[170px] inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-full text-sm font-semibold text-white hover:text-white bg-white/5 hover:bg-white/10 border border-white/18 hover:border-white/30 transition-all group cursor-pointer"
+            className="w-full sm:flex-1 inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-full text-xs sm:text-sm font-semibold text-white hover:text-white bg-white/5 hover:bg-white/10 border border-white/18 hover:border-white/30 transition-all group cursor-pointer"
           >
             <GithubIcon className="w-4 h-4 text-slate-400 group-hover:text-white transition-colors" />
             <span>GitHub Profile</span>
@@ -146,7 +146,7 @@ export default function Home() {
         </div>
 
         {/* Refractive Metric Chips */}
-        <div className="mt-12 sm:mt-14 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 w-full max-w-4xl">
+        <div className="mt-12 sm:mt-14 grid grid-cols-2 md:grid-cols-4 gap-2.5 sm:gap-4 w-full max-w-4xl">
           {[
             { icon: Sparkles, label: 'Optics Engine', value: 'SVG Refraction', color: 'text-[#00E676]' },
             { icon: Cpu, label: 'Performance', value: '100 / 100 CWV', color: 'text-[#00E676]' },
@@ -162,11 +162,11 @@ export default function Home() {
                 }}
                 liquidPress={{ scale: 0.94, squish: 0.03 }}
                 fallbackClassName="liquid-glass-fallback"
-                className="p-4 rounded-2xl border border-white/15 hover:border-[#00E676]/50 flex flex-col items-center justify-center text-center gap-1.5 transition-all shadow-md bg-white/5"
+                className="p-3 sm:p-4 rounded-2xl border border-white/15 hover:border-[#00E676]/50 flex flex-col items-center justify-center text-center gap-1 sm:gap-1.5 transition-all shadow-md bg-white/5"
               >
-                <Icon className={`w-5 h-5 ${item.color} mb-0.5`} />
-                <div className="text-xs text-[#4B5563] font-medium">{item.label}</div>
-                <div className="text-sm font-semibold text-white tracking-tight">{item.value}</div>
+                <Icon className={`w-4 h-4 sm:w-5 sm:h-5 ${item.color} mb-0.5`} />
+                <div className="text-[11px] sm:text-xs text-[#4B5563] font-medium truncate w-full">{item.label}</div>
+                <div className="text-xs sm:text-sm font-semibold text-white tracking-tight truncate w-full">{item.value}</div>
               </LiquidGlassWrapper>
             );
           })}
@@ -212,7 +212,7 @@ export default function Home() {
             borderRadius: 16,
           }}
           fallbackClassName="liquid-glass-fallback"
-          className="p-8 sm:p-12 rounded-2xl border border-white/18 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left bg-white/5"
+          className="p-5 sm:p-8 md:p-12 rounded-2xl border border-white/18 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 text-center md:text-left bg-white/5"
         >
           <div className="max-w-xl">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold text-[#00E676] bg-[#00E676]/15 border border-[#00E676]/30 mb-4">
@@ -228,7 +228,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="shrink-0 flex flex-col sm:flex-row gap-3">
+          <div className="shrink-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
             <LiquidGlassWrapper
               as={Link}
               href="/stack"
@@ -237,14 +237,14 @@ export default function Home() {
               }}
               liquidPress={{ scale: 0.94, squish: 0.03 }}
               fallbackClassName="liquid-glass-pill-fallback"
-              className="px-6 py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-[#00E676]/15 hover:bg-[#00E676]/25 border border-[#00E676]/60 flex items-center justify-center gap-2 transition-all cursor-pointer shadow-lg"
+              className="w-full sm:w-auto px-6 py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-[#00E676]/15 hover:bg-[#00E676]/25 border border-[#00E676]/60 flex items-center justify-center gap-2 transition-all cursor-pointer shadow-lg"
             >
               <span>Explore Full Tech Stack</span>
               <ArrowRight className="w-4 h-4 text-[#00E676]" />
             </LiquidGlassWrapper>
             <Link
               href="/about"
-              className="px-6 py-3 rounded-full text-xs sm:text-sm font-semibold text-slate-300 hover:text-white bg-white/5 hover:bg-white/10 border border-white/18 flex items-center justify-center gap-2 transition-all"
+              className="w-full sm:w-auto px-6 py-3 rounded-full text-xs sm:text-sm font-semibold text-slate-300 hover:text-white bg-white/5 hover:bg-white/10 border border-white/18 flex items-center justify-center gap-2 transition-all"
             >
               <span>About My Approach</span>
             </Link>
@@ -261,7 +261,7 @@ export default function Home() {
           <p className="mt-3 text-sm sm:text-base text-slate-400">
             Let&apos;s build high-performance interfaces, AI-powered applications, or next-generation web products.
           </p>
-          <div className="mt-6 flex justify-center">
+          <div className="mt-6 flex justify-center w-full">
             <LiquidGlassWrapper
               as={Link}
               href="/contact"
@@ -270,7 +270,7 @@ export default function Home() {
               }}
               liquidPress={{ scale: 0.94, squish: 0.03 }}
               fallbackClassName="liquid-glass-pill-fallback"
-              className="px-8 py-3.5 rounded-full text-sm font-semibold text-white bg-[#00E676]/15 hover:bg-[#00E676]/25 border border-[#00E676]/60 shadow-[0_0_24px_rgba(0,230,118,0.25)] flex items-center gap-2 transition-all cursor-pointer"
+              className="w-full sm:w-auto px-6 sm:px-8 py-3.5 rounded-full text-xs sm:text-sm font-semibold text-white bg-[#00E676]/15 hover:bg-[#00E676]/25 border border-[#00E676]/60 shadow-[0_0_24px_rgba(0,230,118,0.25)] flex items-center justify-center gap-2 transition-all cursor-pointer"
             >
               <Sparkles className="w-4 h-4 text-[#00E676] animate-pulse" />
               <span>Start a Conversation</span>

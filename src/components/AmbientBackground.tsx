@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 
 export const AmbientBackground: React.FC = () => {
@@ -20,7 +18,7 @@ export const AmbientBackground: React.FC = () => {
 
       {/* 2. Unified Light Engine: Single, static Neon Emerald Green (#00E676) glow node with soft multi-stop gradient */}
       <div 
-        className="absolute -top-[140px] left-1/2 -translate-x-1/2 w-[800px] sm:w-[1100px] h-[500px] rounded-full blur-2xl sm:blur-3xl pointer-events-none opacity-90"
+        className="absolute -top-[140px] left-1/2 w-[340px] sm:w-[650px] md:w-[900px] lg:w-[1100px] h-[280px] sm:h-[400px] md:h-[500px] rounded-full blur-2xl sm:blur-3xl pointer-events-none opacity-90"
         style={{
           background: 'radial-gradient(ellipse 65% 55% at 50% 30%, rgba(0, 230, 118, 0.42) 0%, rgba(0, 230, 118, 0.22) 35%, rgba(0, 230, 118, 0.06) 65%, transparent 85%)',
           transform: 'translate3d(-50%, 0, 0)',

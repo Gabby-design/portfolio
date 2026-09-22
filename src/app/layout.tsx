@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import AmbientBackground from "@/components/AmbientBackground";
@@ -21,6 +21,13 @@ export const metadata: Metadata = {
   keywords: ["Front-End Engineer", "Next.js 14", "TypeScript", "Tailwind CSS", "QuickLiquid", "Glassmorphism", "AI Full-Stack Developer"],
 };
 
+export const viewport: Viewport = {
+  themeColor: "#010101",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -34,7 +41,7 @@ export default function RootLayout({
     >
       <body
         suppressHydrationWarning
-        className="min-h-full flex flex-col bg-[#010101] text-white selection:bg-[#00E676]/30 selection:text-[#00E676]"
+        className="min-h-full flex flex-col bg-[#010101] text-white selection:bg-[#00E676]/30 selection:text-[#00E676] overflow-x-hidden w-full"
       >
         {/* Global Ambient Refraction Canvas */}
         <AmbientBackground />

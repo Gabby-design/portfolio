@@ -63,19 +63,21 @@ export default function ProjectsPage() {
         <p className="text-sm text-slate-400 mb-6">
           I design and engineer performant web applications, design systems, and AI-enabled tools from idea to production.
         </p>
-        <LiquidGlassWrapper
-          as={Link}
-          href="/contact"
-          config={{
-            borderRadius: 14,
-          }}
-          liquidPress={{ scale: 0.94, squish: 0.03 }}
-          fallbackClassName="liquid-glass-pill-fallback"
-          className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-sm font-semibold text-white bg-[#00E676]/15 hover:bg-[#00E676]/25 border border-[#00E676]/60 shadow-[0_0_28px_rgba(0,230,118,0.25)] transition-all cursor-pointer"
-        >
-          <span>Get in Touch for New Projects</span>
-          <ArrowRight className="w-4 h-4 text-[#00E676]" />
-        </LiquidGlassWrapper>
+        <div className="flex justify-center w-full">
+          <LiquidGlassWrapper
+            as={Link}
+            href="/contact"
+            config={{
+              borderRadius: 14,
+            }}
+            liquidPress={{ scale: 0.94, squish: 0.03 }}
+            fallbackClassName="liquid-glass-pill-fallback"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 rounded-full text-xs sm:text-sm font-semibold text-white bg-[#00E676]/15 hover:bg-[#00E676]/25 border border-[#00E676]/60 shadow-[0_0_28px_rgba(0,230,118,0.25)] transition-all cursor-pointer"
+          >
+            <span>Get in Touch for New Projects</span>
+            <ArrowRight className="w-4 h-4 text-[#00E676]" />
+          </LiquidGlassWrapper>
+        </div>
       </div>
 
       {/* Deep Dive Modal */}
